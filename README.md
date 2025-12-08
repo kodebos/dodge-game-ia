@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# 🎮 Dodge Game con IA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Videojuego de esquivar obstáculos con Inteligencia Artificial que aprende a jugar usando **Q-Learning**.
 
-## Available Scripts
+![Estado del Proyecto](https://img.shields.io/badge/estado-activo-success.svg)
+![Licencia](https://img.shields.io/badge/licencia-MIT-blue.svg)
 
-In the project directory, you can run:
+## 🚀 Instalación
 
-### `npm start`
+```bash
+# Clonar repositorio
+git clone https://github.com/tu-usuario/dodge-game-ia.git
+cd dodge-game-ia
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Instalar dependencias
+npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Ejecutar
+npm start
+```
 
-### `npm test`
+## 🎯 Características
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 🎮 **Modo Manual**: Juega usando las flechas ↑ ↓
+- 🤖 **Modo IA**: Observa cómo la IA aprende automáticamente
+- 📊 **Q-Learning**: Algoritmo de aprendizaje por refuerzo
+- 📈 **Estadísticas en tiempo real**: Generación, score, epsilon
+- ⚡ **Dificultad progresiva**: La velocidad aumenta con el tiempo
 
-### `npm run build`
+## 🧠 Cómo funciona la IA
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+La IA usa **Q-Learning**, un algoritmo que aprende la mejor acción para cada situación:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Estados**: Posición del jugador y distancia a obstáculos
+- **Acciones**: Subir, bajar o quedarse quieto
+- **Recompensas**: +1 por sobrevivir, -100 por colisión
+- **Aprendizaje**: Mejora después de cada partida
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+Q(s,a) ← Q(s,a) + α[r + γ max Q(s',a') - Q(s,a)]
+```
 
-### `npm run eject`
+## 🛠️ Tecnologías
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React 18
+- Tailwind CSS
+- HTML5 Canvas
+- JavaScript (Q-Learning)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📝 Licencia
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+MIT License - Ver [LICENSE](LICENSE) para más detalles
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⭐️ Si te gustó el proyecto, dale una estrella en GitHub
